@@ -43,6 +43,7 @@ size_t CountLines(FileData* fileData)
 void SwapChars(FileData* fileData)
 {
     ASSERT(fileData != nullptr);
+    
     for (size_t i = 0; i < fileData->bufSize; i++)
     {
         if (fileData->buf[i] == '\n') 
@@ -73,6 +74,7 @@ void Freedom(FileData* fileData)
 void PrintfBuf(FileData* fileData)
 {
     ASSERT(fileData != nullptr);
+    
     printf("#  bufSize: %lu\n", fileData->bufSize);
     printf("#  textSize: %lu\n", fileData->textSize);
     for (size_t i = 0; i < fileData->textSize; i++)
